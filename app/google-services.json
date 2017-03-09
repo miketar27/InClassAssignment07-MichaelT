@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "785074206648",
+    "firebase_url": "https://secret-13d52.firebaseio.com",
+    "project_id": "secret-13d52",
+    "storage_bucket": "secret-13d52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785074206648:android:5c421f46db5b54bf",
+        "android_client_info": {
+          "package_name": "com.example.miket.secret"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785074206648-96ddo4ish2dgfqb4ijpdc45qcmvr2230.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.miket.secret",
+            "certificate_hash": "fb9b3bb6460e7e7e3eb47ba2c6c82164473c40c9"
+          }
+        },
+        {
+          "client_id": "785074206648-9bi8v86ho50ts00c29j2lg38ssmc6or6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEVxzOPi5YdL5CcvBRdE5JPnRWBWw_SBQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785074206648-9bi8v86ho50ts00c29j2lg38ssmc6or6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
