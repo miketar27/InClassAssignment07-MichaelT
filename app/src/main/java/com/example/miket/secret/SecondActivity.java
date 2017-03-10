@@ -1,5 +1,6 @@
 package com.example.miket.secret;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -17,8 +18,11 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        Intent intent= getIntent();
+        String target = intent.getStringExtra("target");
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("secret");
+        DatabaseReference myRef = database.getReference(target).child("secret");
 
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
@@ -28,6 +32,12 @@ public class SecondActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
                 TextView textView = (TextView) findViewById(R.id.secret_display);
+                if (value != null){
+                    textView.setText(value);
+                }
+                else {
+                    textView. setText(getResources().getString(R.string.error_msg));
+                }
                 textView.setText(value);
             }
 

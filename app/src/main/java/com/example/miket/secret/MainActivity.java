@@ -20,7 +20,12 @@ public class MainActivity extends AppCompatActivity {
     public void onSave(View view) {
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("secret");
+
+        //DatabaseReference myRef = database.getReference("Cathy").child("secret");
+        EditText user = (EditText) findViewById(R.id.name);
+        String username= user.getText().toString();
+
+        DatabaseReference myRef = database.getReference(username).child("secret");
 
         EditText editText = (EditText) findViewById(R.id.editText);
         String userSecret= editText.getText().toString();
@@ -30,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onRevealSecret(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
+
+        EditText target= (EditText) findViewById(R.id.target);
+        intent.putExtra("target", target.getText().toString());
 
         startActivity(intent);
     }

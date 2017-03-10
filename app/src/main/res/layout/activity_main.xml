@@ -7,11 +7,20 @@
     tools:context="com.example.miket.secret.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Firebase Basics"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Your Name"/>
 
     <EditText
         android:id="@+id/editText"
@@ -29,6 +38,15 @@
         android:layout_height="wrap_content"
         android:onClick="onSave"
         android:text="save"/>
+
+    <EditText
+        android:id="@+id/target"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Whose secret to reveal"/>
 
     <Button
         android:layout_width="match_parent"
