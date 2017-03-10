@@ -38,7 +38,6 @@ public class SecondActivity extends AppCompatActivity {
                 else {
                     textView. setText(getResources().getString(R.string.error_msg));
                 }
-                textView.setText(value);
             }
 
             @Override
